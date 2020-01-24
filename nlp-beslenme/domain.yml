@@ -1,36 +1,64 @@
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-
+- food_makes_hungry
+- why_feel_hungry
 templates:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_food_makes_hungry:
+  - text: 'Greyfurt: Diyet yapıyorsanız uzak durmanız gereken besinlerden biri de
+      greyfurttur. Kansere karşı koruyucu olan greyfurdun kötü yanı iştah açıcı özelliğinin
+      de bulunmasıdır. Karalahana: Karaciğer ve bazı kan kanseri türlerine de iyi
+      gelen kara lahana, ayrıca iyi bir iştah açıcıdır. Patates: Patatesin yapısında
+      bulunan bileşikler kan basıncını düşürücü etki gösterir ; bu endenle glisemik
+      endeksi yüksek olan yiyecekler arasında bulunan patates, özellikle kızartma
+      şeklinde pişirilirse çok çabuk acıkmanıza neden olur. Kırmızı Biber: Kolesterolü
+      önleyici özelliği bulunan kırmızı biber iştah açar. Bu nedenle acı bir yemek
+      yediğinizde doyduğunuzu çok kolay anlayamazsınız. Nohut: Mideyi temizleyerek
+      iştah açan nohut, sağlık açısından yararlı olsa da kilo verirken çok fazla tüketilmemesi
+      gereken bir kurubaklagildir. İncir: Kilo aldırıcı özelliği bulunan incir iştah
+      açar , bu nedenle diyet döneminde yemeniz tavsiye edilmez. Havuç: Havucun kalorisi
+      ve glisemik endeksi diğer sebzelere göre daha yüksektir. Bu nedenle acıktırıcı
+      özelliği olan havucun diyetlerde bulunmaması gerekir. Alkol: Alkollü içeceklerden
+      uzak durmaya çalışın. Alkollü içkiler, size kalori kazandırırken iştahınızın
+      açılmasına neden olur. Tuz: Tuz iştah açıcı özelliğe sahiptir. Çok tuzlu bir
+      besinin ardından tatlı yeme isteğinin doğması, kan şekerinizdeki dalgalanmalar
+      yüzündendir. Özellikle diyette tüketimden kaçınılmalıdır. Tarçın: Kokusuyla
+      özellikle tatlıların vazgeçilmezi olan tarçın da çok çabuk acıktıran baharatlardandır.
+      Mısır: Glisemik endeks değerinin yüksek olması nedeniyle kan şekeri seviyesini
+      yükselten mısır , yendikten sonra açlık hissi uyandırır. Bu nedenle diyet yapanların
+      uzak durması gereken bir besindir'
+  utter_why_feel_hungry:
+  - text: 'Bazı yiyecekler sizi hızla acıktırırken bazıları çok daha uzun süre tok
+      kalmanızı sağlar. İşte iştah kapatan yiyecekler ve sık yeme ataklarının önüne
+      geçmek için yapanız gerekenler ve gıda tercihleri.   Tok tutan gıdaların özellikleri
+      Avokado: B6 vitamini deposudur. Kansere karşı koruyucu etkisi vardır. Tok tutan
+      avokadoyu kendinizi aç hissettiğiniz zamanlarda yiyebilirsiniz. Badem: Günde
+      iki avuç düzenli olarak yenecek bademin, tokluk hissi vererek obeziteye karşı
+      müzadelede yararlı olduğu yapılan araştırmalar ile kanıtlanmış bir gerçek. Balık:
+      Balıkta bulunan iyot, tiroit hormonlarının yapımı için gereklidir ve açlık duygusunun
+      gelişmesini engeller. Brokoli: Brokolide vücuttaki insulin dengesini koruyan
+      krom bulunur. Kan şekerinin düşmesini engelleyen krom sayesinde açlık hissetmezsiniz.
+      Böğürtlen: Kendinizi aç hissettiğinizde bir kase yoğurdun içine karıştıracağınız
+      böğürtlen sizi bir süre tok tutar. Böğürtlen çok fazla antioksidan içerir, bu
+      nedenle de yararlıdırlar. Çavdar Ekmeği: Yapılan diyetlerin hepsinde kepek ekmeğinden
+      bahsedilse de aslında çavdar ekmeğinin tok tutan etkisi yadsınamaz. Hatta beyaz
+      buğday ekmeğine göre yüzde 50 oranında daha fazla doyma hissi verir. Dil Peyniri:
+      Gün içerisinde açlık hissettiğinizde atıştırabileceğiniz faydalı bir gıda olmasının
+      yanında proteinli yapısından dolayı tok tutma özelliğine de sahiptir. Elma:
+      Yapılan diyetlerde ara öğün olarak elma tavsiye edilir bunun nedeni ise tok
+      tutucu özelliğinin olmasıdır. Kalorisi az olan elmayı acıktığınızda yerseniz
+      bir süre daha tok hissedersiniz. Esmer Pirinç: Kan şekerini dengede tutarak
+      açlık hissinin önüne geçen karbonhidratların başında gelen esmer pirinç, uzun
+      süre acıkmamanızı sağlar. Bu nedenle yemeklerinizde esmer pirince yer verin.   Ihlamur:
+      Yemek saatine yakın içilen ıhlamurun, hastalıklara faydasının yanı sıra iştahı
+      kapatan etkisi de var.   Kepekli Makarna: Günlük gıda tüketiminde önemli bir
+      yere sahip olan lifli besinlerdendir. Bu besinler yendikten sonra hacimlerinin
+      yüzde 20″si kadar genişleme özelliğine sahip oldukları için tokluk hissi verirler.
+      Sardalya: Protein deposudur. Kan şekeri seviyesinin dengelenmesini sağlar .
+      Bu sayede tokluk hissi verir. Ayrıca metabolizmanın harekete geçmesini sağlar.
+      Yulaf Ezmesi: Tokluk ve şişkinlik hissi veren besinlerin başında gelir. Fakat
+      yulaf ezmesini süt ile değil su ile yapmakta fayda vardır. Sütle yapıldığında
+      ise sütü tercih edin. Yumurta: Çok pişmiş yumurta da tok tutan yiyecekler arasındadır.
+      Hazırlanması kolay olan yumurta protein açısından da zengindir. Protein sizi
+      tok tuttuğu için kolay kolay acıkmazsınız.'
+actions:
+- utter_food_makes_hungry
+- utter_why_feel_hungry

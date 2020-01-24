@@ -1,36 +1,19 @@
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-
+- what_is_abdominoplasti
+- how_abdominoplasti
 templates:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_what_is_abdominoplasti:
+  - text: Abdominoplasti, göbeği de çıkaracak şekilde, göbeğin altından itibaren tüm
+      alt abdomendeki fazla derinin çıkarılması ve gevşek karın duvarının kruvaze
+      edilerek güçlendirilmesini kapsar.
+  utter_how_abdominoplasti:
+  - text: Cerrahınız pubik kıllar hizasından göbek üzerine kadar olan alanda cilt
+      ve yağ dokusunu çıkaracak şekilde yatay horizontal veya eliptik bir kesi yapar.
+      Karın kaslarının üstündeki fasya tabakası kalıcı dikişlerle sıkılaştırılır.
+      Göbek çevresindeki deri çıkarıldığı için göbek normal pozisyonunda yeniden oluşturulur.
+      Genelde bir kalça kemiğinden diğerine uzanan kesi estetik olarak kapatılır.
+      Kesi izi bikini hattının altında kalacak şekilde planlanır. Kesinin uzunluğu
+      ve görünümü kişiden kişiye değişebilir.
+actions:
+- utter_what_is_abdominoplasti
+- utter_how_abdominoplasti
