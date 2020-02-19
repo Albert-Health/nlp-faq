@@ -1,64 +1,366 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
 intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
 - food_makes_hungry
 - why_feel_hungry
+- how_cope_with_foul_breath
+- how_enhance_human_milk
+- why_sensing_excessive_feeling_of_hunger
+- how_to_diet_before_surgery
+- always_want_to_have_snack
+- can_use_seasoning
+- what_seasonings_benefits_and_effects
+- when_eat_bread_rice_pasta_dessert
+- drinking_ice_tea
+- drinking_coffee_after_surgery
+- why_important_solid_liquid_seperation
+- how_much_protein_from_which_food
+- in_how_many_meals_take_protein_supplement_daily
+- how_vegans_vegetarians_meet_protein_needs
+- what_happens_dont_use_protein_powder
+- what_foods_trigger_reflux
+- what_foods_good_for_reflux
+- how_feed_to_stay_full
+- vitamin_mineral_supplements
 templates:
+  utter_greet:
+  - text: Hey! Nasılsın?
+  utter_cheer_up:
+  - text: 'İşte seni neşelendirecek bir şey:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Bu sana yardımcı oldu mu?
+  utter_happy:
+  - text: Süper, devam et.
+  utter_goodbye:
+  - text: Hoşça kalın.
+  utter_iamabot:
+  - text: Ercik tarafından yönetilen bir botum.
   utter_food_makes_hungry:
-  - text: 'Greyfurt: Diyet yapıyorsanız uzak durmanız gereken besinlerden biri de
-      greyfurttur. Kansere karşı koruyucu olan greyfurdun kötü yanı iştah açıcı özelliğinin
-      de bulunmasıdır. Karalahana: Karaciğer ve bazı kan kanseri türlerine de iyi
-      gelen kara lahana, ayrıca iyi bir iştah açıcıdır. Patates: Patatesin yapısında
-      bulunan bileşikler kan basıncını düşürücü etki gösterir ; bu endenle glisemik
-      endeksi yüksek olan yiyecekler arasında bulunan patates, özellikle kızartma
-      şeklinde pişirilirse çok çabuk acıkmanıza neden olur. Kırmızı Biber: Kolesterolü
-      önleyici özelliği bulunan kırmızı biber iştah açar. Bu nedenle acı bir yemek
-      yediğinizde doyduğunuzu çok kolay anlayamazsınız. Nohut: Mideyi temizleyerek
-      iştah açan nohut, sağlık açısından yararlı olsa da kilo verirken çok fazla tüketilmemesi
-      gereken bir kurubaklagildir. İncir: Kilo aldırıcı özelliği bulunan incir iştah
-      açar , bu nedenle diyet döneminde yemeniz tavsiye edilmez. Havuç: Havucun kalorisi
-      ve glisemik endeksi diğer sebzelere göre daha yüksektir. Bu nedenle acıktırıcı
-      özelliği olan havucun diyetlerde bulunmaması gerekir. Alkol: Alkollü içeceklerden
-      uzak durmaya çalışın. Alkollü içkiler, size kalori kazandırırken iştahınızın
-      açılmasına neden olur. Tuz: Tuz iştah açıcı özelliğe sahiptir. Çok tuzlu bir
-      besinin ardından tatlı yeme isteğinin doğması, kan şekerinizdeki dalgalanmalar
-      yüzündendir. Özellikle diyette tüketimden kaçınılmalıdır. Tarçın: Kokusuyla
-      özellikle tatlıların vazgeçilmezi olan tarçın da çok çabuk acıktıran baharatlardandır.
-      Mısır: Glisemik endeks değerinin yüksek olması nedeniyle kan şekeri seviyesini
-      yükselten mısır , yendikten sonra açlık hissi uyandırır. Bu nedenle diyet yapanların
-      uzak durması gereken bir besindir'
+  - text: 'Bazı yiyecekler sizi hızla acıktırır. Diyet yapıyorsanız uzak durmanız
+      gereken besinler:  Greyfurt, kara lahana, patates, kırmızı biber, nohut,incir,
+      havuç, alkol,tuz,tarçın,mısır.'
   utter_why_feel_hungry:
   - text: 'Bazı yiyecekler sizi hızla acıktırırken bazıları çok daha uzun süre tok
       kalmanızı sağlar. İşte iştah kapatan yiyecekler ve sık yeme ataklarının önüne
-      geçmek için yapanız gerekenler ve gıda tercihleri.   Tok tutan gıdaların özellikleri
-      Avokado: B6 vitamini deposudur. Kansere karşı koruyucu etkisi vardır. Tok tutan
-      avokadoyu kendinizi aç hissettiğiniz zamanlarda yiyebilirsiniz. Badem: Günde
-      iki avuç düzenli olarak yenecek bademin, tokluk hissi vererek obeziteye karşı
-      müzadelede yararlı olduğu yapılan araştırmalar ile kanıtlanmış bir gerçek. Balık:
-      Balıkta bulunan iyot, tiroit hormonlarının yapımı için gereklidir ve açlık duygusunun
-      gelişmesini engeller. Brokoli: Brokolide vücuttaki insulin dengesini koruyan
-      krom bulunur. Kan şekerinin düşmesini engelleyen krom sayesinde açlık hissetmezsiniz.
-      Böğürtlen: Kendinizi aç hissettiğinizde bir kase yoğurdun içine karıştıracağınız
-      böğürtlen sizi bir süre tok tutar. Böğürtlen çok fazla antioksidan içerir, bu
-      nedenle de yararlıdırlar. Çavdar Ekmeği: Yapılan diyetlerin hepsinde kepek ekmeğinden
-      bahsedilse de aslında çavdar ekmeğinin tok tutan etkisi yadsınamaz. Hatta beyaz
-      buğday ekmeğine göre yüzde 50 oranında daha fazla doyma hissi verir. Dil Peyniri:
-      Gün içerisinde açlık hissettiğinizde atıştırabileceğiniz faydalı bir gıda olmasının
-      yanında proteinli yapısından dolayı tok tutma özelliğine de sahiptir. Elma:
-      Yapılan diyetlerde ara öğün olarak elma tavsiye edilir bunun nedeni ise tok
-      tutucu özelliğinin olmasıdır. Kalorisi az olan elmayı acıktığınızda yerseniz
-      bir süre daha tok hissedersiniz. Esmer Pirinç: Kan şekerini dengede tutarak
-      açlık hissinin önüne geçen karbonhidratların başında gelen esmer pirinç, uzun
-      süre acıkmamanızı sağlar. Bu nedenle yemeklerinizde esmer pirince yer verin.   Ihlamur:
-      Yemek saatine yakın içilen ıhlamurun, hastalıklara faydasının yanı sıra iştahı
-      kapatan etkisi de var.   Kepekli Makarna: Günlük gıda tüketiminde önemli bir
-      yere sahip olan lifli besinlerdendir. Bu besinler yendikten sonra hacimlerinin
-      yüzde 20″si kadar genişleme özelliğine sahip oldukları için tokluk hissi verirler.
-      Sardalya: Protein deposudur. Kan şekeri seviyesinin dengelenmesini sağlar .
-      Bu sayede tokluk hissi verir. Ayrıca metabolizmanın harekete geçmesini sağlar.
-      Yulaf Ezmesi: Tokluk ve şişkinlik hissi veren besinlerin başında gelir. Fakat
-      yulaf ezmesini süt ile değil su ile yapmakta fayda vardır. Sütle yapıldığında
-      ise sütü tercih edin. Yumurta: Çok pişmiş yumurta da tok tutan yiyecekler arasındadır.
-      Hazırlanması kolay olan yumurta protein açısından da zengindir. Protein sizi
-      tok tuttuğu için kolay kolay acıkmazsınız.'
+      geçmek için yapanız gerekenler ve gıda tercihleri: Avakado, badem, balık, brokoli,
+      böğürtlen, çavdar ekmeği, dil peyniri, elma, esmer pirinç, ıhlamur, kepekli
+      makarna, sardalya, yulaf ezmesi, yumurta.'
+  utter_how_cope_with_foul_breath:
+  - text: 'Tüp mide ameliyatından sonra birçok hastayı rahatsız eden konulardan biri
+      de ağız kokusudur. Ameliyattan sonra midedeki yara iyileşmesi, suyun nispeten
+      az tüketilmesi, yeni şekliyle basıncı artmış bir tüp olan midenin reflüyü tetikleyebilecek
+      olması, özellikle erken dönemde sıvı ile beslenirken midenin daha hızlı boşalması
+      ağız kokusuna sebep olabilir.Ağız kokusunu önlemek için birkaç ana kurala dikkat
+      edip etmediğinizi kontrol etmeniz önemlidir: 1- 10 dakikada bir büyük yudum
+      su içmek 2- Sigara içmemek 3- Günde 3 ana öğün, 2 ara öğün beslenmek 4- Çay
+      – kahve tüketmemek'
+  utter_how_enhance_human_milk:
+  - text: 'Bebeğin ilk gıdası bir damla dahi olsa ‘annesinin ilk sütü (colostrum)
+      olmalı’ ve gelişim bozukluğuna yol açmadığı sürece bebek anne sütü ile beslenmeli.
+      İlk ana kural su tüketimine dikkat etmek olmalı. Günde 3 litre su tüketimini
+      sabitlemeye çalışın. 3 litrelik bir sürahi ya da şişe edinin. Suyunuzu biraz
+      aromalandırmak hem suyu rahat tüketmenizi sağlayacak hem de açlık ile susuzluk
+      algısını karıştırıp su içmek yerine hamur işine saldırmanızı engelleyecektir.
+      Üstelik sütünüzün lezzetini ve kalitesini de artıracaktır. İşte anne sütünü
+      arttıran besinler: Tahin, kuru baklagiller, kurutulmuş meyveler, çemen, çörek
+      otu, ısırgan otu, ceviz, fındık, badem, yulaf ezmesi, rezene, su.'
+  utter_why_sensing_excessive_feeling_of_hunger:
+  - text: Ameliyattan sonra ilk günlerde midenizden kazınma, aşırı açlık hissi gibi
+      sinyaller gelmesinden endişelenmeyin. Sonraki günlerde Ghrelin etkisi ile açlık
+      hissiniz ciddi düzeyde azalacaktır. Ancak açlık son derece doğal bir duygudur.
+      Zaman içerisinde Ghrelin seviyeleri yavaş yavaş yükselebilir ve açlık hissiniz
+      normale dönebilir. Unutmayın, bu ameliyatların etkisi açlık hissinizi tamamen
+      yok etmek üzerine kurulu değildir. Acıkmanızı ameliyatın başarısızlığı olarak
+      yorumlamayın. Açlık hissi doğal, çöp gıda tüketmek ise anormaldir. Açlık hissinin
+      beslenme hatalarından kaynaklanmadığından emin olmak için; günlük protein alımınızı
+      arttırın, karbonhidrat alımınızı azaltın, diyabetiniz varsa kan şekerinizin
+      takibini yapın, günlük su tüketiminizi 2 litrenin altına düşürmeyin açlık ile
+      susuzluk uyaranlarını karıştırmayın, sık acıkıyor iseniz her defasında önce
+      bir bardak su için.
+  utter_how_to_diet_before_surgery:
+  - text: Obezite cerrahisi öncesi kilonuz, diyabetiniz ve diğer yandaş hastalıklarınız
+      göz önünde bulundurularak özel bir diyet programını size önerilen süre boyunca
+      uygulamanız hem ameliyatınızın daha rahat geçmesini hem de ameliyat sonrası
+      iyileşme sürecinizin kolaylaşmasını sağlayacaktır.Ameliyat öncesi diyetin temel
+      amacı kilo vermeniz değildir. Bu dönemde normal beslenme sürecinizde şişkin
+      ve yağlı olan karaciğerinizi daha sağlıklı bir düzeye indirmek, fakat bunu yaparken
+      şekerinizin aniden düşüp hipoglisemiye girmenizi önlemek ilk hedefimizdir, bu
+      nedenle beslenme tablonuzdan yağ ve şekeri tamamen çıkarmalı protein , vitamin
+      ve mineral açısından olabildiğince yüksek bir diyet uygulamalısınız. Ameliyat
+      öncesi uymanız gereken ana kurallar; günde 2500- 3000 cc su tüketmelisiniz,
+      asitli içecekler içmemelisiniz, tüm öğünlerinizde protein ağırlıklı beslenmelisiniz,
+      özellikle rafine şeker kullanmamalısınız, sigara kullanıyorsanız ve ameliyata
+      bir aydan uzun zaman var ise bırakmaya çalışın, bir aydan daha kısa bir zaman
+      kaldıysa veya bırakamazsanız ; nikotin bandı, nikotin sakızı, elektronik sigara
+      gibi desteklerle de aşama aşama azaltarak son haftaya olabildiğince az sigara
+      içerek girmeye çalışmalısınız, bu dönemi danışmanlarımız ile planlayabilirsiniz,
+      ameliyatınızdan bir hafta önce Plavix, Coumadin, Aspirin ve türevleri olan Coraspin
+      Alcaseltzer v.b. kan sulandırıcı ilaçları kullanmamalısınız.
+  utter_always_want_to_have_snack:
+  - text: '1-Farkında Olmadan Alınan Kalorilere Dikkat: Otlanma davranışı gün boyu,
+      genellikle de besin değeri düşük gıdaların tüketilmesi durumudur. Çocuğunuzun
+      mısır gevreğini düşüncesizce bitirmeniz, ofiste önünüze konan çöreklerden, keklerden
+      ağzınıza atmak, öğleden sonra bir protein barı veya gece çilekli yoğurt yemek
+      gibi sorun olmayacağını sandığınız sürekli atıştırmanız başarınızı baltalayacak,
+      kilo vermenizi yavaşlatacak, hatta durduracak, daha da kötüsü yeniden kilo almanıza
+      yol açacaktır.Bu yeme tarzı binge eating denen, tıkınırcasına yeme bozukluğu
+      gibi davranışsal terapi ile düzeltilmelidir. Atıştırma tamamen pasif direniş
+      tarzında bir yeme bozukluğudur ve mutlaka üzerine gidilmelidir.Tüm dünyadaki
+      bariatrik cerrahi forumlarını incelediğimde, grazing tarzı yeme bozukluğunun
+      bariatrik cerrahi hastalarında en sık ameliyat sonrası problemlerinden biri
+      olduğunu görüyorum. Elbette söylemek yapmaktan daha kolay, ama kilo kaybınızı
+      korumak istiyorsanız bu davranış mutlaka düzeltilmelidir.                                                                                 2-Çözüm
+      Sizde!: İlk yapmanız gereken mutlaka profesyonel yardım almaktır. Kendi başınıza
+      bu maladaptif yeme bozukluğunu çözmeniz pek mümkün değildir. Davranışsal terapi
+      ve destek grupları faydalı olacaktır. İkinci aşamada kendinizi yakından gözlemeyi
+      deneyin. 3 günlük bir süreçte her yediğinizi, içtiğinizi bir kenara yazın. Daha
+      sonra bunu olması gereken, bariatrik diyetisyeninizin önerdiği beslenme planınızla
+      karşılaştırın. Muhtemelen yeterince protein ve sebze almadığınızı fark edeceksiniz.
+      Aldığınız besin destekleri ve vitaminleri de not etmeyi unutmayın.Bariatrik
+      diyetisyenimizle birlikte, sonraki 3 gün için ideal bir bariatrik öğün planlayın.
+      Sizi atıştırmaya iten tetikleyicileri saptamaya çalışın ve kaydedin. Açlığın
+      değişik tiplerini öğrenin. Beyinsel ve fiziksel açlığın farklarını kavrayın.
+      Mutlaka tüm çöp gıdaları beslenme düzeninizden çıkarın.                                                                                  3-Akıllıca
+      Yeme Stratejisini Geliştirin!: Yemek yerken mutlaka masaya oturun ve öğününüzün
+      tadını çıkarmaya odaklanın. Asla birşey izleyerek veya gezinerek yemeyin. Öğününüze
+      taze veya yeni pişirilmiş sebze ile başlayın, mutlaka protein ve lif tükettiğinizden
+      emin olun. Öğünler arasında minimum 4-8 bardak su tükettiğinize emin olun.Ve
+      ne olursa olsun, üç temel öğün, en fazla da 1 ara öğünden fazla yemeyin. Ara
+      öğünlerin tek amacı metabolizmanızı hızlandırmaktır, bunu abur cubur atıştırabileceğiniz
+      bir kaçamak sanmayın. Mutlaka saf protein, taze sebze ve meyve tükettiğinize
+      emin olun. Ameliyattan önce de binge eating tarzı bir yeme bozukluğunuz varsa
+      ve ameliyattan sonra grazing belirtileri baş gösterdiyse hiç duraksamadan profesyonel
+      destek almanız gerektiğini unutmayın. Bariatrik cerrahi size kalıcı kilo kaybı
+      sağlamanız için çok güçlü bir silah sağlar ama mucize sunmaz. Unutmayın, mucizeyi
+      yaratacak olan sizsiniz!'
+  utter_can_use_seasoning:
+  - text: Obezite cerrahisi sonrasında özellikle ameliyat sonrasında ilk ay maalesef
+      araştırılmadan, hatta üzerinde hiç düşünmeden söylenen şablon bir öneridir “baharatlardan
+      uzak durun” Oysa baharatların sihirli gücüne en ihtiyacımız olan dönem midemizin
+      iyileşme zamanı olan ilk aydır. Sonraki dönemlerde de düzenli ve ayarında kullanımları
+      şifa verecektir.Ameliyat sonrası ilk ay  tüm çorbalarınızı süzgeçten geçirin.
+      Baharatları ayarında kullanın. Elimiz yara olduğunda yarayı yakan herşey midenizi
+      de yakar.Özellikle acımsı baharatlarda ölçünüz haftada bir çay kaşığı kadar
+      miktarı geçmesin.
+  utter_what_seasonings_benefits_and_effects:
+  - text: "FESLEĞEN(REYHAN): Yatıştırıcı , mide için yararlı, diüretik, gaz ve balgam\
+      \ söktürücü etkilere sahiptir.Anti mikrobiyaldir. Çorba ve salatalarda kullanabilirsiniz.\
+      \                                                                          \
+      \                                         BİBERİYE :Bağışıklık güçlendirir.Baş\
+      \ ağrısına iyi gelir.Yağlarımızı yakar, Kabızlığa iyi gelir .Kemik suyu yaparken\
+      \ bir tutam atarsanız mükemmel kokar ve bulantı yapmaz.                    \
+      \                                                                          \
+      \           SAFRAN: Karaciğeri temizler,anti kanserojendir,kalbi güçlendirir.Safranın\
+      \ içerdiği bileşenler bünyede depresyona neden olan asit dengesinin bozulmasına\
+      \ engel olmaktadır. Safran potasyum açısından zengin olduğu için kan basıncını\
+      \ sağlıklı seviyelerde tutmaya yardımcı olur. Az kullanılmalı yani haftada çeyrek\
+      \ çay kaşığı bile yeterlidir.                                              \
+      \                                 ZENCEFİL: Zencefilin mideyi iyileştiren mucize\
+      \ etkisi çok eski zamanlardan beri bilinmektedir. Zencefil özellikle mide bulantısı\
+      \ ya da ülser gibi sorunlarda etkilidir. Bunun dışında zencefil, regl ağrıları,\
+      \ kas ağrıları ve migren de dahil olmak üzere ağrılar konusunda yardımcı bir\
+      \ baharattır ve  metabolizmayı hızlandırıcıdır.                            \
+      \                                                     KEKİK: M.S 1.yüzyıldan\
+      \ beri kullanılır.Öksürüğü ve balgamı azaltır.Güçlü bir antiseptiktir yani mikropları\
+      \ öldürür.                       ZERDEÇAL:Kek ve pastalarda dahi kullanılabilen\
+      \ neredeyse hiç aroması olmayan bir baharattır , sadece tatlı sarı bir rengi\
+      \ vardır.Güçlü bir gaz giderici,bağışıklık güçlendiricidir.Haftada 1 çay kaşığı\
+      \ yeterlidir.                                                           ADAÇAYI:\
+      \ Karaciğeri temizler,stresi azaltır,depresyona iyi gelir .Bir tutamı ile harika\
+      \ et,tavuk yemekleri ve çorbalar yapabilirsiniz.                           \
+      \                                                                          \
+      \                                KARABİBER:Öksürük ve soğuk algınlığında süper\
+      \ bir enfeksiyon kovucudur.Diyet lif içerir sindirime yardımcı olur,kilo verimini\
+      \ hızlandırır.                                                             \
+      \                                                                          \
+      \  KIRMIZI BİBER: Haftada bir tatlı kaşığı kırmızı biber ameliyat sonrasında\
+      \ dahi rahatlıkla tolere edilebilir et suyu türlerini yaparken.Vücut metabolizmasını\
+      \ etkiler ve proteinin enerjiye dönüşümüne yardımcı olur. •E vitamini hücrelerde\
+      \ hasar görülmesini engeller ve bu sayede kanser potansiyelini azaltır.kırmızı\
+      \ biberde C vitamini ve potasyum da bol miktarda bulunur. C vitamini bağışıklık\
+      \ sistemini güçlendirirken potasyum kalp krizi riskini azaltır.            \
+      \                                                                          \
+      \           TARÇIN: Genel kültürel alışkanlığımızın aksine hem tatlılarda hem\
+      \ tuzlularda hem de suyumuzda dahi kullanabiliriz.Tarçın tip 2 diyabetin tedavisine\
+      \ yardımcı olur. Tarçının kan basıncını düşürdüğü, kan şekerini ve insülin direncini\
+      \ azalttığı yapılan araştırmalar tarafından kanıtlanmıştır.Metabolizmayı düzenleyici\
+      \ etkisi sayesinde obezite ile mücadelede yardımcıdır.Kötü kolesterol olarak\
+      \ bilinen LDL kolesterol seviyesini azaltır ve iyi kolesterol olan HDL kolesterol'ü\
+      \ artırır."
+  utter_when_eat_bread_rice_pasta_dessert:
+  - text: Ameliyatın hemen ardından kafanızda bu sorular varsa, öncelikle neden bu
+      ameliyatı olduğunuzu kendinize bir kez daha hatırlatın. Obezite hastası olmanıza
+      neden olan çöp gıdaları tüketmeye dönmek için acele etmeniz bu ameliyatla elde
+      edeceğiniz başarıyı ciddi şekilde baltalamaktan başka işe yaramayacaktır. Balayı
+      dediğimiz ilk aylar ve yıllarda büyük bir başarıyla kilo verseniz de, besleyici
+      değeri olmayan bu gıdalara geri dönmek başarınızı ters yönde etkileyebilir.
+      Bu nedenle size ideal kilonuzu sağlayan beslenme şeklini kalıcı hale getirmeye
+      odaklanın.Şeker ve yağ içeriği yüksek olan gıdalardan kaçının. Kilo vermek ve
+      kilo alımını önlemek için dengeli bir diyet takip etmelisiniz.Şeker ve yağ oranı
+      yüksek olan yiyecekler boş kalori olarak kabul edilir ve herhangi bir vitamin
+      veya besin içermez. Aksine, insulin salgısını uyararak daha hızlı acıkmanıza
+      ve ameliyattan önceki kısır döngüye dönmenize neden olur.
+  utter_drinking_ice_tea:
+  - text: 1 kutu kolada ortalama 56 mg kafein vardır. 1 kutu ice tea de ise ortalama
+      70 mg kafein vardır. Kafein sağlıklı midede dahi reflüyü tetiklemektedir.Hele
+      ki fruktoz , katkı maddeleri, koruyucular içeren bir içecek ile bu kafeini birleştirdiğimizde
+      oldukça sağlıksız bir seçim yapmış olacaksınız. Şekeri ise çoğunlukla ucuz olduğu
+      için fruktoz şurubu, sakkaroz ile eklenir. Ayrıca asitliği düzenleyici limon
+      tuzu (sitrik asit) midenin PH dengesini bozar.Ice tea içeceksek evde kendimiz
+      yapabiliriz. ama hayattan soyutlanıp elbette herşeyi kendiniz yapın demiyoruz.
+      Çöp gıda dediğimiz hazır gıdalardan olabildiğince uzak durarak ama hayattan
+      da tamamen soyutlanıp takıntı halinde hesap yapmadan sağlıklı bir beslenmeyi
+      hayat tarzı haline getirmeye çalışmalıyız.
+  utter_drinking_coffee_after_surgery:
+  - text: Kahvenin – kafeinin direkt olarak mideyi genişlettiğine dair inanışı destekleyecek
+      bilimsel bir veri yoktur ancak kahvenin, üstelik kafeinli yada kafeinsiz olması
+      çok fark etmeksizin, mide asit salgısında artışa neden olduğu, asit salgısındaki
+      bu artmaya bağlı olarak gastrit (midenin iç yüzünü kaplayan mukoza tabakasının
+      iltihaplanması) ve ülsere (mide mukozasında belirli bir kısmın derin bir şekilde
+      aşınması sonucu meydana gelen yara) neden olabileceği bilinmektedir.Bu etkileri
+      nedeniyle;ameliyat sonrası erken dönemde  uzun bir stapler hattı içeren bir
+      midenin iyileşmesi üzerindeki olumsuz etkileri göz önüne alınarak kahve tüketilmemesi
+      önerilir. İyileşmesinin hücre düzeyinde tamamen gerçekleştiği birinci yıl sonundan
+      itibaren ise günde en fazla iki fincan sütlü kahve tüketimi kabul edilebilir.Kahve-kafein
+      tüketimi alışkanlığınız var ise kafeinsiz kahve içebilirsiniz ya da Türk kahvesi
+      bağımlıları için, onun yerine Menengiç kahvesi içebilirler. Menengiç kahvesi
+      kafein içermez ve mide asidini artırmaz. Güçlü bir antioksidandır, B ve E grubu
+      vitaminleri, mineral olarak sodyum, potasyum,kalsiyum, fosfor, bakır, demir,
+      çinko, magnezyum, mangan, selenyum ve çok düşük oranda kadmiyum içerir.
+  utter_why_important_solid_liquid_seperation:
+  - text: Obezite cerrahisinden sonra katı sıvı alımı ayrımı gereklidir çünkü ; sıvı
+      alımı çok küçük olan mide hacminizin çok daha çabuk dolup almanız gereken vitamin
+      ,proteini yeterince almamanıza sebep olur. Katı ve sıvı bir arada alınınca mide
+      çok çabuk dolacağından kusma hissi ya da midede ağrı oluşur.Uzun vadede ise
+      midenizin genişlemesine , acıkma hissinin sadece katı yiyeceğiniz bir öğünden
+      çok daha çabuk gelmesine sebep olur çünkü sıvının itici gücü önce midede torbalanma
+      yapar ardından ise besinin mideyi daha çabuk terk etmesini sağlar.
+  utter_how_much_protein_from_which_food:
+  - text: 'Bazı besinlerin protein değerleri: 1 yumurta:6 gr.                                                                                                                            1
+      yumurta büyüklüğünde köfte:6 gr.                                                                                                        50
+      gr. yağsız peynir:10-12 gr.                                                                                                            200
+      ml süt:6-7 gr.                                                                                                                        150
+      gr. tavuk: 25 -30 gr.'
+  utter_in_how_many_meals_take_protein_supplement_daily:
+  - text: Protein birden çok öğün ve sağlıklı ara öğünlerde birden çok doza bölünerek
+      alınmalıdır. Vücut bir seferde 30 gramdan fazla proteini absorbe edemez. Ayrıca,
+      protein daha uzun süre tokluk hissetmemizi sağlayan bir besin türüdür. Öğünlere
+      yayılırsa, açlık hissi ve sık yeme riski azalacaktır.
+  utter_how_vegans_vegetarians_meet_protein_needs:
+  - text: Vegan ya da vejeteryan iseniz bitkisel protein tozu kullanarak protein desteği
+      açığınızı kapatabilirsiniz. Süt içemeyenler süt yerine soya sütü,badem sütü
+      içebilirler.
+  utter_what_happens_dont_use_protein_powder:
+  - text: Vücut hızlı kilo kaybı döneminde iyileşme ve vücut kas kitlesini korumak
+      için ek proteine ihtiyaç duyar. Protein aynı zamanda metabolizmanızın hızlanması
+      için de gereklidir. Diyette gerekli miktarda protein bulunmazsa, bu ihtiyaç
+      kaslardan karşılanır ve vücut giderek zayıf düşer.
+  utter_what_foods_trigger_reflux:
+  - text: 'Çikolata: İçerdiği metiksantin maddesiyle reflü problemlerini artırdığı
+      görülmüştür.                                                       Alkol: Alkollü
+      içecekler reflünüzü tetikleme potansiyeline sahiptirler.                                                                   Nane:
+      Nane ve nane içeren ürünler (sakız vb.) reflüyü tetikleyebilmektedir.                                                               Asitli
+      meyveler: Yukarıda iyi gelen meyveleri sıralamıştık. Bazı meyvelerse içerdikleri
+      yüksek asit sebebiyle reflü şikayetlerini artırırlar. Portakal, mandalina, limon,
+      greyfurt, domates bunlara örnek olarak gösterilebilir.                                         Kafeinli
+      içecekler: Kola, kahve, enerji içecekleri ve gazlı içecekler.                                                                     Soğan
+      ve sarımsak: Soğan ve sarımsak birçok insanda mide yanmasına sebep olabilmektedir.                                                   Acı
+      ve baharatlı yiyecekler de soğan ve sarımsak gibi reflü şikayetlerini artırmaktadırlar.
+      Özellikle birlikte tüketmekten kaçınmak gerekir.'
+  utter_what_foods_good_for_reflux:
+  - text: 'Sağlıklı Yağlar: Avokado, zeytinyağı, ceviz yağı, susam yağı  gibi sağlıklı
+      yağlar kullanılmalıdır.                                       Et grubu: Özellikle
+      yağsız olduğu için tavuk göğüs eti, hindi göğüs eti; yağsız ya da az yağlı balıketi
+      tüketilebilir. Yağsız olduğu takdirde kırmızı et de tüketilebilir.                                                                                                         Meyveler:
+      Her meyve değil tabi ki, mümkün olduğunca lifli meyveleri tercih etmelisiniz.
+      Şeftali, elma, muz, armut, kavun tüketilebilir seçenekler arasındadır                                                                                                                 Sebzeler:
+      Sebzelerin doğal olarak yağ ve şeker içeriği düşüktür ve mide asidini azaltmaya
+      yardımcı olur. Özellikle daha yüksek lif oranına sahip olan lahana, brokoli,
+      kuşkonmaz, kereviz, yeşil fasulye ve salatalık iyi seçeneklerdir.                                           Bakliyatlar:
+      Columbia Üniversitesinde yapılan bir çalışmada bitkisel proteinlerin mide ve
+      yemek borusu arasındaki özofagus kasını zorlamadığı, hatta bu kasın fonksiyonunun
+      gelişimine katkı sağladığı gösterilmiştir. Özellikle sarı ve yeşil mercimek,
+      siyah fasulyeyi tercih ederseniz hem lifli hem de yüksek bitkisel proteinli
+      beslenmiş olursunuz.                                                           Yulaf:
+      Özel bir başlık ayrılması gereken bir besin. Yulaf birçoğunuzun bildiği gibi
+      tam bir lif kaynağıdır ve mide asidini absorbe ederek reflü semptomlarını hafifletir.
+      Gerek kahvaltılarınızda gerekse ara öğünlerinizde süt veya yoğurda karıştırarak
+      tüketebilir veya damak tadınıza göre atıştırmalık yulaflı bir bar yapabilirsiniz.
+      Hatta yeterince hamaratsanız un yerine kullanarak pasta ve ekmek dahi yapabilirsiniz.                                                                                                                                 Zencefil:
+      Zencefilin doğal anti-enflamatuar özellikleri bulunduğu bilinen bir gerçek olmakla
+      birlikte ve mide yanmalarına iyi gelir. Özellikle rendelenmiş taze zencefili
+      tariflerinizde kullanabilir ya da çayı şeklinde içerek reflü şikayetlerinizi
+      azaltabilirsiniz. Fakat dikkat edin, zencefilde miktar çok önemlidir, zencefil
+      yeterli ölçüde kullanıldığında rahatlama ve iyileşme sağlarken fazlası mide
+      yanmasını artıracaktır.'
+  utter_how_feed_to_stay_full:
+  - text: 'Glisemik endeksi düşük besinler: Sürekli acıkıyor ve bunun önüne geçmek
+      istiyorsanız, glisemik endeksi düşük besinleri tüketmelisiniz. Glisemik endeks,
+      yenilen herhangi bir besinin kan şekerini yükseltme yeteneğidir. Tükettiğiniz
+      besin, kan şekerini ne kadar uzun zamanda ve az miktarda yükseltiyorsa, glisemik
+      endeksinin düşük olduğunu belirtir. Bu besinler, bireyin daha uzun süre tok
+      kalmasını sağlar .                                                                                                                                   Karbonhidratlar:
+      Karbonhidratlar kepek, buğday gibi tahıl ürünlerinde, sebze ve meyvelerde bulunur.
+      İçeriğindeki lifler, sindirim sistemini harekete geçirir. Ayrıca bu besinler
+      insanı tok tutarak açlık hissini engeller.                                                   Triptofan:
+      Proteinlerin büyük bir bölümünde bulunan bir çeşit aminoasittir. Triptofan,
+      vücutta serotoninin oluşmasında ve hücrelere taşınmasında önemli bir görev alır.
+      Serotonin ise iştah etkisini azaltır. Özellikle muz, avokado, yulaf ve peynirde
+      bulunur.               Krom: Krom vücuda insülin dengesini korur. Bu denge kan
+      şekerinin düşmemesini veya azalmaması açısından çok önemlidir. Kan şekerinin
+      düşmesi açlığa yol açar. Krom ihtiyacınızı karşılamak için fındık, ceviz gibi
+      kabuklu yemişler ve tahıl ürünleri yemek gerekir.           Albümin: Bir tür
+      taşıyıcı proteindir. Can sıkıntısını giderir ve iştahı kapar. Bu protein, triptofanı
+      oluşturarak beyine taşır ve serotonin üretimini arttırır. Bezelye, fıstık ve
+      fasulyede bulunur.                                                                               Fruktoz:
+      Meyvelerden elde edilen doğal şekerdir. Fruktoz kan şekeri dengesini kesinlikle
+      etkilemez. Ayrıca yemek sonrası tatlı ihtiyacı duymanızı engeller. Çilek ve
+      bal früktozun kaynağıdır.                                                                                     İyot:
+      Tiroid hormonlarının yapımı için gereklidir. Açlık duygusunu engeller. Balık,
+      iyotlu tuz ve soğanda bulunur.'
+  utter_vitamin_mineral_supplements:
+  - text: Eğer tüp mide ameliyatı geçirdiyseniz yediklerinizin miktarı azaldığından
+      vitamin ve minerallere gereksinim olur. Eğer hem midenin küçültüldüğü hem de
+      emilimin azaltığı bir obezite ameliyatı geçirdiyseniz vitamin,mineral ve protein
+      ihtiyacınız sadece midenin küçültüldüğü ameliyatlardan daha fazladır. Ameliyattan
+      sonra önereceğimiz zamanda düzenli vitamin mineral kullanımına başlayabilirsiniz.
+      Ameliyat türünüze ve kişisel ihtiyaçlarınıza göre  eksiklikleri  önlemek için
+      yaşam boyu vitamin ve mineral takviyesi gerekebilmektedir.  Aynı anda kalsiyum
+      ve demir almayın. Aç iken vitamin almayın. Demir ile c vitaminini birlikte almalısınız.
 actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
 - utter_food_makes_hungry
 - utter_why_feel_hungry
+- utter_how_cope_with_foul_breath
+- utter_how_enhance_human_milk
+- utter_why_sensing_excessive_feeling_of_hunger
+- utter_how_to_diet_before_surgery
+- utter_always_want_to_have_snack
+- utter_can_use_seasoning
+- utter_what_seasonings_benefits_and_effects
+- utter_when_eat_bread_rice_pasta_dessert
+- utter_drinking_ice_tea
+- utter_drinking_coffee_after_surgery
+- utter_why_important_solid_liquid_seperation
+- utter_how_much_protein_from_which_food
+- utter_in_how_many_meals_take_protein_supplement_daily
+- utter_how_vegans_vegetarians_meet_protein_needs
+- utter_what_happens_dont_use_protein_powder
+- utter_what_foods_trigger_reflux
+- utter_what_foods_good_for_reflux
+- utter_how_feed_to_stay_full
+- utter_vitamin_mineral_supplements
