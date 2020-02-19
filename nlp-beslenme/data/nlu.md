@@ -203,3 +203,6 @@
 - ne zaman ekmek, pilav,makarna,tatlı yiyebilirim
 - hadi sufle yiyelim
 - hadi sufle
+
+## intent:drinking_ice_tea
+- ice tea içebilir miyim
