@@ -1,20 +1,9 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
 intents:
 - alcohol_consumption
 - car_usage
-templates:
-  utter_car_usage:
-  - text: 'Kendi güvenliğiniz için ağrı kesici olarak narkotik kullandığınız sürece
-      araç kullanmamanız önerilir. Önerilen süre ameliyattan sonraki 7-14 gündür. '
-  utter_alcohol_consumption:
-  - text: Bariatrik cerrahiden sonra alkol tüketimi kesinlikle önerilmez. Alkol son
-      derece düşük besin değeri olan, buna karşılık son derece yüksek kalori içeren
-      bir maddedir. Bu nedenle kilo verme hedefinizle birebir çelişir. Bypass ve tüp
-      mide ameliyatlarından sonra midedeki bir enzim nedeniyle alkol emilimi de değişikliğe
-      uğrar. Emilim çok daha hızlı olabilir. Emilen alkol daha etkili olduğundan,
-      obezite cerrahisi hastaları diğerlerine göre daha yüksek alkol düzeylerine ulaşır
-      ve daha uzun süre orada kalırlar. Bazı hastalarda alkol tüketimi artabilir ve
-      alkol bağımlılığına yol açabilir. Bunlar genelde ameliyat öncesinde de yeme
-      bozukluğu olan ve yemeyi bir kaçış olarak kullanan hastalardır.
 actions:
 - utter_car_usage
 - utter_alcohol_consumption
